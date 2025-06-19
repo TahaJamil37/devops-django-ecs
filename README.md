@@ -31,7 +31,7 @@ The source code includes:
 ### ✅ Run the App Locally (for verification)
 
 ```bash
-# Install dependencies (recommend using virtualenv)
+# Install dependencies 
 pip install -r requirements.txt
 
 # Run the development server
