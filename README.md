@@ -1,4 +1,4 @@
-# 🚀 DevOps Project 04 – Deploy Django App on AWS using ECS & ECR
+# 🚀 DevOps Project 1 – Deploy Django App on AWS using ECS & ECR
 
 This project demonstrates how to containerize and deploy a Django-based web application using **Docker**, **Amazon ECR**, and **Amazon ECS (Fargate)**.
 
