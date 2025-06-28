@@ -1,0 +1,62 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+
+# SQLite database (if you use it locally)
+db.sqlite3
+
+# Django static/media files
+staticfiles/
+media/
+
+# VSCode/IDE files
+.vscode/
+.idea/
+
+# ----------------------------
+# Docker
+# ----------------------------
+*.log
+docker-compose.override.yml
+
+# ----------------------------
+# Terraform
+# ----------------------------
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform.crash
+*.tfplan
+
+# Ignore .terraform.lock.hcl ONLY if you don't want to lock providers (but usually you DO keep it)
+# !terraform/.terraform.lock.hcl
+
+# ----------------------------
+# Mac OS & system files
+# ----------------------------
+.DS_Store
+
+# Node (in case you add frontend parts later)
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
+
+# Python virtual environment if named differently
+env/
