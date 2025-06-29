@@ -93,9 +93,26 @@ resource "aws_ecs_task_definition" "main" {
           hostPort      = 8000
         }
       ]
+      logConfiguration = {
+        logDriver = "awslogs"
+        options = {
+          awslogs-group         = "/ecs/django-app"
+          awslogs-region        = "us-east-1"
+          awslogs-stream-prefix = "ecs"
+        }
+      }
+      
     }
   ])
+  lifecycle {
+    create_before_destroy = true  
+  }
 }
+resource "aws_cloudwatch_log_group" "ecs_logs" {
+  name = "/ecs/django-app"
+  retention_in_days = 7
+}
+
 
 
 
@@ -108,6 +125,7 @@ resource "aws_ecs_service" "django" {
   desired_count   = 1
   launch_type     = "FARGATE"
  depends_on = [aws_iam_role_policy_attachment.ecs_task_execution_role_policy]
+ force_new_deployment = true
 
 
   network_configuration {
